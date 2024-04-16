@@ -14,6 +14,41 @@ pnpm dev
 bun dev
 ```
 
+## Deployment
+
+### First installing dependencies
+
+```sh
+pnpm install
+```
+
+### Generate prisma
+
+```sh
+npx prisma generate
+```
+
+
+### Update ENV variables
+
+change the `http://localhost:3000` to the host url
+
+```sh
+NEXT_PUBLIC_API_URL=http://localhost:3000
+NEXTAUTH_URL=http://localhost:3000
+```
+### Build & Serve
+
+```sh
+pnpm run build
+pnpm serve
+```
+
+
+
+### DEV
+
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
