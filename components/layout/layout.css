@@ -1,0 +1,49 @@
+.layout {
+  position: relative;
+  -moz-border-radius: 0 0 18px 18px;
+  -webkit-border-radius: 0 0 18px 18px;
+  border-radius: 0 18px 18px 18px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  max-height: calc(100vh - 130px);
+}
+
+@media only screen and (min-width: 600px) {
+  .header,
+  .pre-header {
+    position: relative;
+  }
+
+  .header:after,
+  .pre-header:after {
+    content: "";
+    height: 50px;
+    border: 10px solid #ffffff;
+    z-index: 20;
+    position: absolute;
+    width: 50px;
+  }
+
+  .dark .header:after,
+  .dark .pre-header:after {
+    border: 10px solid #000000;
+  }
+
+  .dark .header:after,
+  .header:after {
+    right: -40px;
+    bottom: -10px;
+    border-top: 0;
+    border-right: 0;
+    border-radius: 0 0 0 30px;
+  }
+
+  .dark .pre-header:after,
+  .pre-header:after {
+    right: -10px;
+    bottom: -40px;
+    border-left: 0;
+    border-bottom: 0;
+    border-radius: 0 30px 0 0;
+  }
+}

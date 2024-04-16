@@ -1,0 +1,8 @@
+.recharts-surface {
+    overflow: visible
+}
+
+.tremor-BarList-bar {
+    opacity: 1;
+    --tw-bg-opacity:0.9 !important;
+}

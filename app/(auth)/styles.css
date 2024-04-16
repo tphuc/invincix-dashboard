@@ -1,0 +1,31 @@
+.action-box,
+.power-wrap,
+.offices-wrap {
+  position: relative;
+}
+
+.action-box:before,
+.action-box:after {
+  content: "";
+  height: 50px;
+  border: 15px solid #075985;
+  z-index: 20;
+  position: absolute;
+  width: 50px;
+}
+
+.action-box:before {
+  left: -35px;
+  bottom: -15px;
+  border-top: 0;
+  border-left: 0;
+  border-radius: 0 0 38px 0;
+}
+
+.action-box:after {
+  right: -15px;
+  top: -35px;
+  border-top: 0;
+  border-left: 0;
+  border-radius: 0 0 42px 0;
+}

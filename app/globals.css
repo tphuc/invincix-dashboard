@@ -2,32 +2,141 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
+/* @layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background: 213 33% 88%;
+    --foreground: 0 0% 5%;
+    --section-background: 0 0% 100%;
+    --section-foreground: 0 0% 20%;
+    --card: 0 0% 92%;
+    --card-foreground: 0 0% 0%;
+    --popover: 0 0% 9%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 151 82% 59%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 0 0% 92%;
+    --secondary-foreground: 213 12% 18%;
+    --muted: 0 0% 63%;
+    --muted-foreground: 0 0% 63%;
+    --accent: 151 82% 59%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0, 100%, 59%;
+    --destructive-foreground: 0 85.7% 97.3%;
+    --border: 240 3.7% 15.9%;
+    --input: 0 0% 96%;
+    --ring: 151 82% 59%;
+    --radius: 18px;
+  }
+
+  .dark {
+    --background: 0 0% 15%;
+    --foreground: 0 0% 95%;
+    --section-background: 251 43% 5%;
+    --section-foreground: 0 0% 95%;
+    --card: 213 15% 14%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 9%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 151 82% 59%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 220 12% 20%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 63%;
+    --muted-foreground: 0 0% 63%;
+    --accent: 151 82% 59%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0, 100%, 59%;
+    --destructive-foreground: 0 85.7% 97.3%;
+    --border: 240 3.7% 15.9%;
+    --input: 220 12% 20%;
+    --ring: 151 82% 59%;
+    --radius: 18px;
+  }
+} */
+
+
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 240 10% 98%;
+    --card-foreground: 240 10% 3.9%;
+    --section-background: 0 0% 100%;
+    --section-foreground: 0 0% 20%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 142.1 76.2% 36.3%;
+    --primary-foreground: 355.7 100% 97.3%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 10% 94.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 0 0% 100%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 10% 94%;
+    --ring: 142.1 76.2% 36.3%;
+    --radius: 1rem;
+    /* --radius: 18px; */
+  }
+ 
+  .dark {
+    --background: 218 14.3% 8.1%;
+    --foreground: 0 0% 94%;
+    --section-background: 218 43% 10%;
+    --section-foreground: 0 0% 95%;
+    --card: 240 10% 10%;
+    --card-foreground: 0 0% 95%;
+    --popover: 218 43% 14%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 199 89% 48%;
+    --primary-foreground: 144.9 80.4% 10%;
+    --secondary: 208 20% 20.9%;
+    --secondary-foreground: 208 10% 70%;
+    --muted: 240 10% 20%;
+    --muted-foreground: 240 12% 64.9%;
+    --accent: 251 43% 5%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 85.7% 97.3%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 10% 15.9%;
+    --ring: 142.4 71.8% 29.2%;
+    --radius: 1rem;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #2e323a;
+  border-radius: 16px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #2e323a;
 }
