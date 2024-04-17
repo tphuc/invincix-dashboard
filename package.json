@@ -4,10 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npx prisma generate && npx prisma db push && npx prisma db seed && next build",
     "start": "next start",
     "lint": "next lint",
     "serve": "next start"
+  },
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
   },
   "dependencies": {
     "@canvasjs/react-charts": "^1.0.2",
