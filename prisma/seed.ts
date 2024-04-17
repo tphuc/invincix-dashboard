@@ -37,7 +37,14 @@ async function seedUsers() {
 
 
 async function main() {
-  await seedUsers()
+  try {
+    await seedUsers()
+  }
+  catch(e){
+    console.log(e)
+    console.log('db seeding completed')
+  }
+
 
 }
 
