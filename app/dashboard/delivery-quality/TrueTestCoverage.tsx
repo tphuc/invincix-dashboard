@@ -2,7 +2,6 @@
 import { Card, Title, BarChart, Text, Flex, Metric, AreaChart } from "@tremor/react";
 import { User } from "lucide-react";
 import { useSession } from "next-auth/react";
-import { Area } from "recharts";
 import { useGetResource } from "@/utils/http";
 
 const data = [
